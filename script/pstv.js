@@ -32,7 +32,7 @@ function display(result) {
         dlist += "<li><div class='tile'><div class='logo'><a href='" + rarr[i].url + "'><img src='" + rarr[i].logo + "'></img></a></div>" +
             "<div class='info'>" +
             "<span class='display_name'>" + rarr[i].display_name + "</span><br>" +
-            "<span class='game'>" + rarr[i].game + "</span>-<span class='views'>" + rarr[i].views + "</span><br>" +
+            "<span class='game'> Game Name : " + rarr[i].game + " </span> | <span class='views'> " + rarr[i].views + " Viewers</span><br>" +
             "<span class='status'>" + rarr[i].status + "</span>" +
             "</div></div></li>";
     }
