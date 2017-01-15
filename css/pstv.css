@@ -1,0 +1,146 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: black;
+    box-sizing: border-box;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    background-color: #2196F3;
+}
+
+.vcenter {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.tv {
+    background-size: 45px 71px;
+    display: inline-block;
+    width: 50px;
+    height: 61px;
+    background-image: url(../images/ic_live_tv_black_24px.svg);
+    background-repeat: no-repeat;
+}
+
+.container {
+    position: absolute;
+    left: 49.7%;
+    top: 93px;
+    transform: translate(-50%);
+}
+
+
+/* code from codepen - search box -*/
+
+
+/* https://codepen.io/jarnovanrhijn/pen/obPLOY */
+
+.search-box input[type="text"] {
+    border: none;
+    background: none;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    transition: all .25s ease-in .25s;
+    color: transparent;
+    font-size: .75rem;
+    line-height: 25px;
+}
+
+.search-box input[type="text"]:hover {
+    cursor: pointer;
+}
+
+.search-box input[type="text"]:hover:focus {
+    cursor: text;
+}
+
+.search-box input[type="text"]:hover+span {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.search-box input[type="text"]:focus {
+    width: 200px;
+    padding: 0 10px;
+    outline: none;
+    color: black;
+    background: none;
+    color: white;
+}
+
+.search-box input[type="text"]:focus+span {
+    width: 200px;
+}
+
+.search-box input[type="text"]:focus+span::before {
+    width: 2px;
+    opacity: 0;
+    transition: all .25s ease-in;
+}
+
+.search-box input[type="text"]+span {
+    z-index: -1;
+    position: absolute;
+    border: 2px solid white;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    transition: all .25s ease-in .25s;
+    border-radius: 25px;
+    left: 0;
+}
+
+.search-box input[type="text"]+span::before {
+    transition: all .25s ease-in .5s;
+    transform-origin: left top;
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    border-radius: 5px;
+    background: white;
+    transform: rotate(45deg) translate(31px, -2px);
+}
+
+.dblock {
+    padding: 15%;
+    padding-top: 50px;
+    color: white;
+}
+
+.dtotal {
+    text-align: center;
+    margin-top: 80px;
+    color: white;
+}
+
+.logo img {
+    max-width: 200px;
+    height: 200px;
+}
+
+.tile {
+    max-height: 220px;
+    margin-bottom: 15px;
+    border-radius: 27px;
+    border: 1px solid white;
+}
+
+.logo {
+    max-width: 220px;
+}
+
+.logo,
+.info {
+    width: 40%;
+    overflow: hidden;
+    height: 220px;
+    padding: 10px;
+    display: inline-block;
+}
