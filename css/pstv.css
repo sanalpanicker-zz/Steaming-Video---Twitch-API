@@ -121,6 +121,7 @@ header {
 }
 
 .logo img {
+    border-radius: 20px;
     max-width: 200px;
     height: 200px;
 }
@@ -143,4 +144,8 @@ header {
     height: 220px;
     padding: 10px;
     display: inline-block;
+}
+
+.display_name {
+    font-size: 38px;
 }
