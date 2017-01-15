@@ -29,12 +29,12 @@ function display(result) {
         dtotal = "";
     for (var i = 0; i < rarr.length; i++) {
 
-        dlist += "<div class='tile'><div class='logo'><a href='" + rarr[i].url + "'><img src='" + rarr[i].logo + "'></img></a></div>" +
+        dlist += "<li><div class='tile'><div class='logo'><a href='" + rarr[i].url + "'><img src='" + rarr[i].logo + "'></img></a></div>" +
             "<div class='info'>" +
             "<span class='display_name'>" + rarr[i].display_name + "</span><br>" +
             "<span class='game'>" + rarr[i].game + "</span>-<span class='views'>" + rarr[i].views + "</span><br>" +
             "<span class='status'>" + rarr[i].status + "</span>" +
-            "</div></div>";
+            "</div></div></li>";
     }
 
     dtotal = "<label class='rtotal_label'>Total results</label><br><span class='rtotal_val'><h1>" + rarr.length + "</h1></span>";

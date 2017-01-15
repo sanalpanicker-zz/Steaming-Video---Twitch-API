@@ -149,3 +149,8 @@ header {
 .display_name {
     font-size: 38px;
 }
+
+ul,
+li {
+    list-style: none;
+}
