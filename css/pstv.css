@@ -112,11 +112,12 @@ header {
     padding: 15%;
     padding-top: 50px;
     color: white;
+    padding-top: 2%;
 }
 
 .dtotal {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 16%;
     color: white;
 }
 

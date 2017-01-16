@@ -1,3 +1,10 @@
+/*
+ * pstv.js
+ * Author : Sanal Panicker
+ * $Date: 2017/01/15 $
+ * $Rev: 1 $
+ */
+
 var BASE_URL = "https://api.twitch.tv/kraken/search/channels",
     CLIENT_ID = "3ayqtffruo2goxf0cvyp75wjm28g4pq",
     search_query = "starcraft";
@@ -8,13 +15,13 @@ l.style.visibility = 'visible';
 var c = document.getElementById('container');
 c.style.visibility = 'hidden';
 
+
 function search(e) {
     if (e.value) {
         search_query = e.value;
     } else {
         search_query = "starcraft";
     }
-
     _jsonp.call(BASE_URL, CLIENT_ID, search_query, "pstv_CallBack");
 }
 
@@ -24,22 +31,12 @@ function display(result) {
         l.style.visibility = 'hidden';
         c.style.visibility = 'visible';
     }
-    var rarr = result.channels,
-        dlist = "",
-        dtotal = "";
-    for (var i = 0; i < rarr.length; i++) {
+    var rarr = result.channels;
 
-        dlist += "<li><div class='tile'><div class='logo'><a href='" + rarr[i].url + "'><img src='" + rarr[i].logo + "'></img></a></div>" +
-            "<div class='info'>" +
-            "<span class='display_name'>" + rarr[i].display_name + "</span><br>" +
-            "<span class='game'> Game Name : " + rarr[i].game + " </span> | <span class='views'> " + rarr[i].views + " Viewers</span><br>" +
-            "<span class='status'>" + rarr[i].status + "</span>" +
-            "</div></div></li>";
-    }
-
-    dtotal = "<label class='rtotal_label'>Total results</label><br><span class='rtotal_val'><h1>" + rarr.length + "</h1></span>";
-    var d = document.getElementById('data_block');
+    //setting total to html
+    var dtotal = "<label class='rtotal_label'>Total results</label> : <span class='rtotal_val'>" + rarr.length + "</span>";
     var t = document.getElementById('total_result');
-    d.innerHTML = dlist;
     t.innerHTML = dtotal;
+    //call paginator widget
+    _paginator.init(rarr, 10, "data_block");
 }
