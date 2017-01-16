@@ -5,8 +5,14 @@
  * $Rev: 1 $
  */
 var _jsonp = _jsonp || {};
+/*
+ * Module for making JSOP calls
+ * Call :  formats the calling URL, builds script, callback function
+ * clean : cleans the scripts from HTML after the call is made.
+ */
 (function() {
     _jsonp = {
+
         call: function(base_url, client_id, search_query, call_backfn) {
             this[call_backfn] = function(data) {
                 console.log(data);

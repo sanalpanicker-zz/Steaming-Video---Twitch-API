@@ -16,6 +16,17 @@ var _paginator = _paginator || {},
 
 
 (function() {
+
+    /*
+     * Module for generating the paginator - this module can be plugged and played into any other apps
+     * init  :  creates the paginator template, updates counter, initializes primary variables 
+     * next  : called when the next button is clicked
+     * prev  :  called when the prev button is clicked
+     * load  : loads each pages based on paginator values
+     * clear : clears the pages before the next even is triggered
+     * updatecounter : is called to updated the values of counter
+     */
+
     _paginator = {
 
         init: function(list, per_page, ul_id) {
