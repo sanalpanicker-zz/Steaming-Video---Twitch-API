@@ -5,16 +5,17 @@
  * $Rev: 1 $
  */
 
-var _paginator = _paginator || {},
-    per_page = 10,
-    template = "",
-    data,
-    temp_id = "",
-    items, total_pages, current_page = 1,
-    prevB, nextB;
+var _paginator = _paginator || {};
+
 
 (function() {
 
+    var per_page = 10,
+        template = "",
+        data,
+        temp_id = "",
+        items, total_pages, current_page = 1,
+        prevB, nextB;
     /*
      * Module for generating the paginator - this module can be plugged and played into any other apps
      * init  :  creates the paginator template, updates counter, initializes primary variables 
