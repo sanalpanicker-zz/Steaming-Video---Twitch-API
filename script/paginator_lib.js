@@ -13,8 +13,6 @@ var _paginator = _paginator || {},
     items, total_pages, current_page = 1,
     prevB, nextB;
 
-
-
 (function() {
 
     /*
