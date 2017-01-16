@@ -156,3 +156,11 @@ ul,
 li {
     list-style: none;
 }
+
+.counter {
+    top: 170px;
+}
+
+.paginate {
+    top: 175px;
+}
